@@ -24,7 +24,10 @@ body{ background-color: #fffffd; color: #373737; }
 .top-bar {
     background-color: #373737;
     color: #fffffd;
-    padding: 0;
+/*    padding: 0;*/
+}
+.top-bar-right > .menu > .menu-text {
+    padding:.7rem .1rem;
 }
 .top-bar a { color: inherit; }
 .mtop-3em { margin-top: 3em; }
