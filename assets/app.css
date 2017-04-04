@@ -1,0 +1,43 @@
+body{ background-color: #fffffd; color: #373737; }
+.row{ margin-bottom: 2em; }
+#index-landing-region{
+    font-size: 4rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 100%;
+    overflow: hidden;
+    background-color: #373737;
+    color: #fffffd;
+    margin-bottom:1em;
+}
+#index-landing-title{}
+#gallery-landing-region{}
+#footer{
+    min-height:1em;
+    background-color: #373737;
+    color: #fffffd;
+    text-align: center;
+}
+.sticky { width: 100%; }
+
+.top-bar, .top-bar ul { background-color: transparent; }
+.top-bar {
+    background-color: #373737;
+    color: #fffffd;
+    padding: 0;
+}
+.top-bar a { color: inherit; }
+.mtop-3em { margin-top: 3em; }
+#index-gallery{
+    /* carousel space - reduce jump on load. conservative b/c phones */
+    min-height: 200px;
+}
+
+/* if using .slider, this and other needed to not conflict with foundation */
+/* .slider { width: 50%; margin: 100px auto; } */
+/* keep within window and re-use the slick loading sprite*/
+#yandex_map {
+    max-width: 100%;
+    background: url("plugins/slick/ajax-loader.gif") no-repeat center center;
+    background-size: 2em;
+}

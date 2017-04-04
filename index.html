@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="отель боброфф, боброфф, архангельск области, России, Bobrovo (Bobroff) Hotel, Bobroff, Arkhangelsk Oblast, Russia">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Отель Боброфф</title>
+        <link rel="stylesheet" href="assets/foundation-6.3.0/css/foundation.min.css">
+        <link rel="stylesheet" href="assets/plugins/slick/slick.css">
+        <link rel="stylesheet" href="assets/slick-theme-custom.css">
+        <link rel="stylesheet" href="assets/app.css">
+    </head>
+    <body>
+
+        <div class="top-bar-container" data-sticky-container>
+            <div class="sticky" data-sticky data-options="anchor: page; marginTop: 0;">
+                <div class="top-bar">
+                    <div class="top-bar-left">
+                        <ul class="menu">
+                            <li class="menu-text"><a href="#">Отель Боброфф</a></li>
+                        </ul>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="menu">
+                            <li class="menu-text"><a href="./gallery.html">Фото</a></li>
+                            <li class="menu-text"><a href="#book">Забронировать</a></li>
+                            <li class="menu-text"><a href="#contact">Контактная информация</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sentinel_index_page"></div>
+
+        <!-- no row to fill width -->
+        <div class="" id="index-landing-region">
+            <div class="small-12 columns">
+                <h1 class="text-center">Отель Боброфф</h1>
+                <h4 class="text-center">Боброво, Архангельская область, Россия</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-8 medium-8 columns">
+
+                Отдых в мини-отеле «БоброFF» – прекрасная возможность провести небольшие корпоративные встречи, отметить с друзьями и близкими день рождения, юбилей или праздничную дату.
+
+                Мини-отель «БоброFF» находится на высоком берегу Северной Двины в поселке Боброво, в 18 километрах от Малых Карел в сторону Голубино. Чуть больше часа на автомобиле из Северодвинска, полчаса из Архангельска.
+
+                Двухэтажный жилой дом с террасой, с тремя просторными спальнями (с размещением до пять человек в каждой), с камином в каждой спальне.
+
+            </div>
+
+            <!--booking provider region-->
+            <div class="large-4 medium-4 columns" id="book">
+                <h5>Забронировать</h5>
+                <div class="callout">
+                    <!-- [booking integration here] -->
+                </div>
+            </div>
+
+            <div class="small-12 columns">
+                Кухня с русской печью, столовая, комната отдыха с бильярдом, телевизором и караоке. На территории есть оборудованный мангал и отдельно стоящее здание бани с бассейном и комнатой отдыха. Территория огорожена забором, есть место для парковки машин. У отдыхающих есть возможность посетить с экскурсией завод пива «Северные пивоварни», где их встретят поморскими песнями и хлебом-солью, попробовать семь сортов пива «БоброFF», при желании отдыхающие могут заказать в отель обед из ресторана «БоброFF» или кафе «Онега» с горячими блюдами, в том числе северной кухни.
+
+                Летом с сопровождающим отдыхающие могут побывать в лесу за грибами или ягодами, сходить на рыбалку. Зимой – покататься на лыжах. И в любое время года есть возможность посетить музей-заповедник Малые Карелы.
+            </div>
+
+        </div>
+
+        <div class="row">
+            <!-- because small images -->
+            <div class="medium-7 medium-centered small-10 small-centered columns">
+                <div id="index-gallery">
+                    <div class="slider-for"></div>
+                    <div class="slider-nav"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="map_row" class="row target">
+            <div id="contact" class="small-10 small-centered columns">
+                
+            </div>
+            <div class="small-12 columns">
+                <div id="yandex_map" style="width: 90%; height: 400px"></div>
+            </div>
+        </div>
+
+        <div id="footer">
+            Отель Боброфф 2017
+        </div>
+
+        <script type="text/javascript" src="assets/foundation-6.3.0/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/foundation-6.3.0/js/what-input.js"></script>
+        <script type="text/javascript" src="assets/foundation-6.3.0/js/foundation.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="assets/plugins/slick/slick.min.js"></script>
+        <script type="text/javascript" src="assets/app.js"></script>
+
+        <!-- below the fold, so defer -->
+        <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+        <script type="text/javascript">
+            ymaps.ready(init);
+            var myMap,
+                myPlacemark;
+
+            function init(){
+                myMap = new ymaps.Map("yandex_map", {
+                    center: [64.355834, 41.142576],
+                    zoom: 9,
+                    controls: ['smallMapDefaultSet']
+                });
+                hotelBobroff = new ymaps.Placemark([64.355834, 41.142576], {
+                    hintContent: 'Отель Боброфф',
+                    balloonContent: 'Отель Боброфф, Архангельская область, России'
+                }, {
+                    preset: 'islands#glyphIcon',
+                    iconGlyph: 'home',
+                    iconGlyphColor: 'green'
+                }
+                );
+                myMap.geoObjects.add(hotelBobroff);
+            }
+        </script>
+    </body>
+</html>
